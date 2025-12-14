@@ -1,11 +1,11 @@
 :root {
-  --bg: #12141d;
-  --surface: #1a1d27;
-  --surface-alt: #202534;
-  --text: #f7f8fb;
-  --muted: #b7bbcc;
-  --accent: #ff8c2e;
-  --accent-strong: #ffb15d;
+  --bg: #080c14;
+  --surface: #101724;
+  --surface-alt: #111d2f;
+  --text: #f5f7fa;
+  --muted: #b6bed1;
+  --accent: #ff3146;
+  --accent-strong: #00e0ff;
   --radius: 16px;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   --max-width: 1100px;
@@ -18,9 +18,9 @@
 body {
   margin: 0;
   font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 22% 18%, rgba(255, 140, 46, 0.14), transparent 40%),
-    radial-gradient(circle at 78% 8%, rgba(255, 177, 93, 0.16), transparent 34%),
-    linear-gradient(145deg, #131724, #0f111c 50%, #0d0f18);
+  background: radial-gradient(circle at 20% 16%, rgba(255, 49, 70, 0.22), transparent 38%),
+    radial-gradient(circle at 80% 10%, rgba(0, 224, 255, 0.24), transparent 32%),
+    linear-gradient(145deg, #0c101c, #060911 52%, #02050b);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -38,7 +38,8 @@ img, video, embed {
 
 header.hero {
   padding: 28px 6% 60px;
-  background: linear-gradient(135deg, #161927, #1c2030);
+  background: linear-gradient(130deg, rgba(0, 224, 255, 0.14), rgba(255, 49, 70, 0.12)),
+    linear-gradient(135deg, #0f1726, #0b1220 55%, #0a0f1c);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -72,7 +73,7 @@ header.hero {
 
 .nav a:hover,
 .nav a:focus-visible {
-  background: rgba(255, 122, 26, 0.12);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.18), rgba(0, 224, 255, 0.18));
   color: var(--text);
 }
 
@@ -123,13 +124,13 @@ header.hero {
   gap: 8px;
   padding: 10px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #0a0a0d;
-  box-shadow: 0 10px 30px rgba(255, 140, 46, 0.35);
+  color: #041019;
+  box-shadow: 0 10px 30px rgba(255, 49, 70, 0.32), 0 6px 24px rgba(0, 224, 255, 0.22);
 }
 
 .btn:hover,
@@ -147,8 +148,8 @@ main {
 }
 
 .section.alt {
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(135deg, rgba(255, 49, 70, 0.06), rgba(0, 224, 255, 0.05)), var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 28px;
   box-shadow: var(--shadow);
@@ -166,11 +167,11 @@ main {
 .accent-highlight {
   display: inline-block;
   padding: 6px 14px;
-  background: rgba(255, 140, 46, 0.12);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.18), rgba(0, 224, 255, 0.18));
   border-radius: 999px;
-  border: 1px solid rgba(255, 140, 46, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: var(--text);
-  box-shadow: 0 10px 30px rgba(255, 140, 46, 0.25);
+  box-shadow: 0 14px 36px rgba(255, 49, 70, 0.25), 0 10px 30px rgba(0, 224, 255, 0.2);
 }
 
 .about-grid {
@@ -196,8 +197,8 @@ main {
 }
 
 .about-card {
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(150deg, rgba(0, 224, 255, 0.08), rgba(255, 49, 70, 0.08)), var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 16px;
   text-align: center;
@@ -212,7 +213,7 @@ main {
   width: 180px;
   height: 220px;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(255, 122, 26, 0.25), rgba(255, 122, 26, 0.05));
+  background: linear-gradient(140deg, rgba(0, 224, 255, 0.18), rgba(255, 49, 70, 0.18));
   border: 1px dashed rgba(255, 255, 255, 0.18);
   display: grid;
   place-items: center;
@@ -236,7 +237,7 @@ main {
 
 .resume-viewer {
   min-height: 260px;
-  background: var(--surface-alt);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.07), rgba(0, 224, 255, 0.07)), var(--surface-alt);
   border-radius: var(--radius);
   border: 1px dashed rgba(255, 255, 255, 0.15);
   display: grid;
@@ -254,8 +255,8 @@ main {
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  background: var(--surface-alt);
-  border: 1px dashed rgba(255, 255, 255, 0.18);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.08), rgba(0, 224, 255, 0.08)), var(--surface-alt);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   cursor: pointer;
   color: var(--text);
@@ -278,8 +279,8 @@ main {
 
 .experience-card,
 .project-upload-card {
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(150deg, rgba(0, 224, 255, 0.06), rgba(255, 49, 70, 0.06)), var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 16px;
   display: grid;
@@ -294,7 +295,7 @@ main {
 
 .upload-preview {
   min-height: 160px;
-  background: var(--surface-alt);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.05), rgba(0, 224, 255, 0.05)), var(--surface-alt);
   border: 1px dashed rgba(255, 255, 255, 0.18);
   border-radius: 12px;
   display: grid;
