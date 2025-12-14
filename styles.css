@@ -1,11 +1,11 @@
 :root {
-  --bg: #0c0c0f;
-  --surface: #131318;
-  --surface-alt: #191920;
-  --text: #f5f5f7;
-  --muted: #a6a6af;
-  --accent: #ff7a1a;
-  --accent-strong: #ff9b4a;
+  --bg: #12141d;
+  --surface: #1a1d27;
+  --surface-alt: #202534;
+  --text: #f7f8fb;
+  --muted: #b7bbcc;
+  --accent: #ff8c2e;
+  --accent-strong: #ffb15d;
   --radius: 16px;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   --max-width: 1100px;
@@ -18,9 +18,9 @@
 body {
   margin: 0;
   font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 20% 20%, rgba(255, 122, 26, 0.1), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(255, 154, 74, 0.08), transparent 32%),
-    var(--bg);
+  background: radial-gradient(circle at 22% 18%, rgba(255, 140, 46, 0.14), transparent 40%),
+    radial-gradient(circle at 78% 8%, rgba(255, 177, 93, 0.16), transparent 34%),
+    linear-gradient(145deg, #131724, #0f111c 50%, #0d0f18);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -38,7 +38,7 @@ img, video, embed {
 
 header.hero {
   padding: 28px 6% 60px;
-  background: linear-gradient(135deg, #0f0f14, #14141b);
+  background: linear-gradient(135deg, #161927, #1c2030);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -52,6 +52,7 @@ header.hero {
 .logo {
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: var(--text);
 }
 
 .nav-links {
@@ -91,13 +92,14 @@ header.hero {
 
 .hero h1 {
   margin: 6px 0 10px;
-  font-size: clamp(28px, 4vw, 40px);
+  font-size: clamp(34px, 5vw, 48px);
   line-height: 1.2;
 }
 
-.lead {
+.hero-subtitle {
   color: var(--muted);
-  margin-bottom: 16px;
+  margin: 0 0 16px;
+  font-weight: 600;
 }
 
 .eyebrow {
@@ -121,22 +123,13 @@ header.hero {
   gap: 8px;
   padding: 10px 16px;
   border-radius: 12px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.btn.primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #0a0a0d;
-  box-shadow: 0 10px 30px rgba(255, 122, 26, 0.35);
-}
-
-.btn.ghost {
-  background: transparent;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--text);
+  box-shadow: 0 10px 30px rgba(255, 140, 46, 0.35);
 }
 
 .btn:hover,
@@ -168,6 +161,16 @@ main {
 
 .section-header p {
   margin: 0;
+}
+
+.accent-highlight {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255, 140, 46, 0.12);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 140, 46, 0.3);
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(255, 140, 46, 0.25);
 }
 
 .about-grid {
@@ -315,6 +318,22 @@ main {
   padding-left: 18px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.skill-group {
+  margin-top: 12px;
+}
+
+.skill-label {
+  margin: 0 0 6px;
+  color: var(--accent-strong);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.skill-items {
+  margin: 0;
+  color: var(--muted);
 }
 
 .projects-list {
