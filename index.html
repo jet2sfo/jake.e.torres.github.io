@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jake E. Torres | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="nav">
+      <div class="logo">Jake E. Torres</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="eyebrow">Mechanical Engineering Student · Loyola Marymount University</p>
+        <h1>Engineering solutions with curiosity, precision, and creativity.</h1>
+        <p class="lead">Explore my journey through hands-on projects, research, and design challenges that push ideas from sketches to reality.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat">
+          <span class="stat-number" id="stat-projects">12</span>
+          <span class="stat-label">Projects & prototypes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="stat-labs">6</span>
+          <span class="stat-label">Labs & course builds</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" id="stat-awards">3</span>
+          <span class="stat-label">Competitions & showcases</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Who I am</p>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm Jake E. Torres, a Mechanical Engineering student at Loyola Marymount University passionate about building systems that merge mechanical reliability with human-centered design. I thrive in hands-on environments—whether machining, CAD modeling, or experimenting with mechatronics—and I enjoy presenting complex ideas in simple, visual ways.</p>
+          <p>Outside of classwork, I explore prototyping projects, club competitions, and community outreach to sharpen my problem-solving skills and collaborate with diverse teams.</p>
+          <div class="pill-row">
+            <span class="pill">CAD (SolidWorks, Fusion 360)</span>
+            <span class="pill">Finite Element Analysis</span>
+            <span class="pill">Prototyping & fabrication</span>
+            <span class="pill">Mechatronics</span>
+            <span class="pill">Team leadership</span>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="avatar" aria-hidden="true">JT</div>
+          <div class="about-card-content">
+            <h3>Let’s build something memorable.</h3>
+            <p>From early sketches to finished prototypes, I'm always looking for the next challenge to engineer.</p>
+            <a class="btn primary" href="#projects">Browse projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section alt">
+      <div class="section-header">
+        <p class="eyebrow">Experience snapshot</p>
+        <h2>Resume</h2>
+      </div>
+      <div class="resume-panel">
+        <div class="resume-actions">
+          <p>Share the latest version of your resume to keep this page current.</p>
+          <label class="file-input">
+            <span>Upload PDF</span>
+            <input type="file" id="resume-upload" accept="application/pdf" />
+          </label>
+          <a class="btn ghost" id="resume-download" href="#" download="Jake_E_Torres_Resume.pdf" aria-disabled="true">Download current copy</a>
+        </div>
+        <div class="resume-viewer" id="resume-viewer">
+          <p class="placeholder">Upload a PDF to preview it here.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Hands-on work</p>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-controls">
+        <form id="project-form" class="project-form">
+          <div class="form-row">
+            <label>
+              <span>Project title</span>
+              <input type="text" id="project-title" name="title" placeholder="Ex: Autonomous line-following robot" required />
+            </label>
+            <label>
+              <span>Summary</span>
+              <input type="text" id="project-summary" name="summary" placeholder="Brief description" required />
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Technologies / tools</span>
+              <input type="text" id="project-tags" name="tags" placeholder="Comma-separated (e.g., Arduino, 3D printing, MATLAB)" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label class="file-input">
+              <span>Upload image</span>
+              <input type="file" id="project-image" name="image" accept="image/*" />
+            </label>
+            <label class="file-input">
+              <span>Upload video</span>
+              <input type="file" id="project-video" name="video" accept="video/*" />
+            </label>
+          </div>
+          <button type="submit" class="btn primary">Add project to gallery</button>
+        </form>
+        <p class="muted">Uploads stay in your browser for privacy—refreshing will clear the gallery.</p>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card">
+          <div class="media placeholder">Image / video</div>
+          <div class="project-content">
+            <h3>Robotic arm prototype</h3>
+            <p>Six-axis desktop arm designed for rapid control testing and kinematics demonstrations.</p>
+            <div class="tag-row">
+              <span class="pill">SolidWorks</span>
+              <span class="pill">Arduino</span>
+              <span class="pill">Servo tuning</span>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="media placeholder">Image / video</div>
+          <div class="project-content">
+            <h3>Wind tunnel test rig</h3>
+            <p>Low-cost setup to visualize airfoil performance using smoke flow and pressure taps.</p>
+            <div class="tag-row">
+              <span class="pill">Machining</span>
+              <span class="pill">Data acquisition</span>
+              <span class="pill">Aerodynamics</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="section-header">
+        <p class="eyebrow">Let’s talk</p>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p>I enjoy collaborating on new ideas, research, and design challenges. Whether it's a quick question or a detailed proposal, feel free to reach out.</p>
+          <ul class="contact-list">
+            <li><span class="pill">Email</span> <a href="mailto:jakeetorres@gmail.com">jakeetorres@gmail.com</a></li>
+            <li><span class="pill">LinkedIn</span> <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">Connect</a></li>
+            <li><span class="pill">Location</span> Los Angeles, CA</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn primary">Send message</button>
+          <p class="muted" id="contact-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed for exploration and iteration — Jake E. Torres</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
