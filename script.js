@@ -1,6 +1,5 @@
 const resumeUpload = document.getElementById('resume-upload');
 const resumeViewer = document.getElementById('resume-viewer');
-const resumeDownload = document.getElementById('resume-download');
 
 function createMediaElement(file) {
   const url = URL.createObjectURL(file);
@@ -53,10 +52,6 @@ resumeUpload?.addEventListener('change', (event) => {
   embed.src = url;
   embed.type = 'application/pdf';
   resumeViewer.appendChild(embed);
-
-  resumeDownload.href = url;
-  resumeDownload.setAttribute('aria-disabled', 'false');
-  resumeDownload.textContent = 'Download uploaded copy';
 });
 
 ['exp1', 'exp2', 'exp3'].forEach((id) => attachUpload(`${id}-upload`, `${id}-preview`));
