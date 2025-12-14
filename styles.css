@@ -392,6 +392,34 @@ main {
   font-size: 18px;
 }
 
+.project-details {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(0, 240, 255, 0.04), rgba(255, 49, 70, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-section h4 {
+  margin: 0 0 6px;
+  color: var(--accent-strong);
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.project-section p,
+.project-section ul {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-section ul {
+  padding-left: 18px;
+  line-height: 1.5;
+}
+
 .contact-buttons {
   display: flex;
   flex-wrap: wrap;
