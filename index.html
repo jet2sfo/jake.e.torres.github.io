@@ -16,6 +16,7 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
+        <li><a href="#skills">Skills & Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -23,25 +24,11 @@
     <div class="hero-content">
       <div class="hero-text">
         <p class="eyebrow">Mechanical Engineering Student · Loyola Marymount University</p>
-        <h1>Engineering solutions with curiosity, precision, and creativity.</h1>
-        <p class="lead">Explore my journey through hands-on projects, research, and design challenges that push ideas from sketches to reality.</p>
+        <h1>Engineering portfolio for Jake E. Torres</h1>
+        <p class="lead">A concise hub for my background, experience, project work, and ways to connect.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#projects">See Projects</a>
-          <a class="btn ghost" href="#contact">Get in Touch</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="stat">
-          <span class="stat-number" id="stat-projects">12</span>
-          <span class="stat-label">Projects & prototypes</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number" id="stat-labs">6</span>
-          <span class="stat-label">Labs & course builds</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number" id="stat-awards">3</span>
-          <span class="stat-label">Competitions & showcases</span>
+          <a class="btn primary" href="#about">About</a>
+          <a class="btn ghost" href="#projects">Projects</a>
         </div>
       </div>
     </div>
@@ -55,35 +42,26 @@
       </div>
       <div class="about-grid">
         <div class="about-text">
-          <p>I'm Jake E. Torres, a Mechanical Engineering student at Loyola Marymount University passionate about building systems that merge mechanical reliability with human-centered design. I thrive in hands-on environments—whether machining, CAD modeling, or experimenting with mechatronics—and I enjoy presenting complex ideas in simple, visual ways.</p>
-          <p>Outside of classwork, I explore prototyping projects, club competitions, and community outreach to sharpen my problem-solving skills and collaborate with diverse teams.</p>
-          <div class="pill-row">
-            <span class="pill">CAD (SolidWorks, Fusion 360)</span>
-            <span class="pill">Finite Element Analysis</span>
-            <span class="pill">Prototyping & fabrication</span>
-            <span class="pill">Mechatronics</span>
-            <span class="pill">Team leadership</span>
-          </div>
+          <h3 class="about-name">Jake E. Torres</h3>
+          <p class="about-title">Mechanical Engineer · Loyola Marymount University</p>
+          <p>Mechanical Engineering student at Loyola Marymount University (Class of 2027), with strong interests across multiple engineering fields including aerodynamics, design, and applied systems. Aerodynamics Lead of LMU’s Formula SAE team, experienced in CAD, CFD, and project leadership. Proficient in SolidWorks, MATLAB, and GD&T, with proven strengths in teamwork, problem-solving, and technical design.</p>
+          <p>I split my time between the San Francisco Bay Area and Los Angeles, giving me opportunities to connect with diverse engineering and professional communities. Outside of academics, I love to work out, cook, and explore new challenges, with personal interests in sports, aviation, racing, and hands-on projects. These passions keep me curious, active, and driven to continue growing both inside and outside the classroom.</p>
         </div>
         <div class="about-card">
-          <div class="avatar" aria-hidden="true">JT</div>
-          <div class="about-card-content">
-            <h3>Let’s build something memorable.</h3>
-            <p>From early sketches to finished prototypes, I'm always looking for the next challenge to engineer.</p>
-            <a class="btn primary" href="#projects">Browse projects</a>
-          </div>
+          <div class="avatar" aria-hidden="true">Photo</div>
+          <p class="muted">Add your photo here.</p>
         </div>
       </div>
     </section>
 
     <section id="resume" class="section alt">
       <div class="section-header">
-        <p class="eyebrow">Experience snapshot</p>
+        <p class="eyebrow">Single upload</p>
         <h2>Resume</h2>
       </div>
       <div class="resume-panel">
         <div class="resume-actions">
-          <p>Share the latest version of your resume to keep this page current.</p>
+          <p>Upload your latest resume (PDF) to preview and download it from this page.</p>
           <label class="file-input">
             <span>Upload PDF</span>
             <input type="file" id="resume-upload" accept="application/pdf" />
@@ -96,101 +74,203 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="skills" class="section">
       <div class="section-header">
-        <p class="eyebrow">Hands-on work</p>
-        <h2>Projects</h2>
+        <p class="eyebrow">Highlights</p>
+        <h2>Skills & Experience</h2>
       </div>
-      <div class="project-controls">
-        <form id="project-form" class="project-form">
-          <div class="form-row">
-            <label>
-              <span>Project title</span>
-              <input type="text" id="project-title" name="title" placeholder="Ex: Autonomous line-following robot" required />
-            </label>
-            <label>
-              <span>Summary</span>
-              <input type="text" id="project-summary" name="summary" placeholder="Brief description" required />
-            </label>
-          </div>
-          <div class="form-row">
-            <label>
-              <span>Technologies / tools</span>
-              <input type="text" id="project-tags" name="tags" placeholder="Comma-separated (e.g., Arduino, 3D printing, MATLAB)" />
-            </label>
-          </div>
-          <div class="form-row">
+      <div class="skills-grid">
+        <article class="experience-card">
+          <div class="upload-block">
+            <div class="upload-preview" id="exp1-preview">Image placeholder</div>
             <label class="file-input">
               <span>Upload image</span>
-              <input type="file" id="project-image" name="image" accept="image/*" />
-            </label>
-            <label class="file-input">
-              <span>Upload video</span>
-              <input type="file" id="project-video" name="video" accept="video/*" />
+              <input type="file" id="exp1-upload" accept="image/*" />
             </label>
           </div>
-          <button type="submit" class="btn primary">Add project to gallery</button>
-        </form>
-        <p class="muted">Uploads stay in your browser for privacy—refreshing will clear the gallery.</p>
-      </div>
-      <div class="projects-grid" id="projects-grid">
-        <article class="project-card">
-          <div class="media placeholder">Image / video</div>
-          <div class="project-content">
-            <h3>Robotic arm prototype</h3>
-            <p>Six-axis desktop arm designed for rapid control testing and kinematics demonstrations.</p>
-            <div class="tag-row">
-              <span class="pill">SolidWorks</span>
-              <span class="pill">Arduino</span>
-              <span class="pill">Servo tuning</span>
-            </div>
+          <div class="experience-text">
+            <strong>Junipero Serra High School</strong>
+            <ul>
+              <li>4.0 GPA Student</li>
+              <li>Principle's List All Semester's HS Career</li>
+              <li>Student Ambassador (2021-2023)</li>
+              <li>Co-Founder Serra Aviation Club</li>
+              <li>National Honor Society Member</li>
+              <li>National Honor Society Service Chair</li>
+              <li>Varsity Baseball Team Captain</li>
+              <li>Outstanding Student Award (2022)</li>
+              <li>Tom Thompson San Mateo Rotary Club Scholarship</li>
+              <li>California Scholarship Federation Awardee</li>
+            </ul>
           </div>
         </article>
-        <article class="project-card">
-          <div class="media placeholder">Image / video</div>
-          <div class="project-content">
-            <h3>Wind tunnel test rig</h3>
-            <p>Low-cost setup to visualize airfoil performance using smoke flow and pressure taps.</p>
-            <div class="tag-row">
-              <span class="pill">Machining</span>
-              <span class="pill">Data acquisition</span>
-              <span class="pill">Aerodynamics</span>
-            </div>
+
+        <article class="experience-card">
+          <div class="upload-block">
+            <div class="upload-preview" id="exp2-preview">Image placeholder</div>
+            <label class="file-input">
+              <span>Upload image</span>
+              <input type="file" id="exp2-upload" accept="image/*" />
+            </label>
+          </div>
+          <div class="experience-text">
+            <strong>Loyola Marymount University</strong>
+            <ul>
+              <li>Co-Founder of Lions Motorsports (LMU FSAE)</li>
+              <li>Team Leader of Aerodynamics Division</li>
+              <li>Member of LMU Additive Manufacturing Club</li>
+              <li>Member of Sigma Phi Epsilon</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="upload-block">
+            <div class="upload-preview" id="exp3-preview">Image placeholder</div>
+            <label class="file-input">
+              <span>Upload image</span>
+              <input type="file" id="exp3-upload" accept="image/*" />
+            </label>
+          </div>
+          <div class="experience-text">
+            <strong>Skills Learned</strong>
+            <ul>
+              <li>Non-Technical</li>
+              <li>Public Speaking</li>
+              <li>Teamwork</li>
+              <li>Leadership</li>
+              <li>Collaboration</li>
+              <li>Problem Solving</li>
+              <li>Critical Thinking</li>
+              <li>Responsibility</li>
+              <li>Technical</li>
+              <li>Solidworks</li>
+              <li>GD&T</li>
+              <li>AutoCad</li>
+              <li>Prototyping / Design</li>
+              <li>Additive Manufacturing (3D Printing)</li>
+              <li>MatLab</li>
+            </ul>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="section alt">
+    <section id="projects" class="section alt">
       <div class="section-header">
-        <p class="eyebrow">Let’s talk</p>
+        <p class="eyebrow">Showcase</p>
+        <h2>Projects</h2>
+        <p class="muted">Each project supports multiple image or video uploads. Text can be added later.</p>
+      </div>
+      <div class="projects-list">
+        <article class="project-upload-card">
+          <header>
+            <h3>Formula SAE Aerodynamic Side Pods</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj1-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj1-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>Drone Basketball 2D Video Game</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj2-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj2-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>Wind Turbine Design & Testing</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj3-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj3-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>Design and Manufacturing Pantograph</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj4-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj4-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>AutoCad: Engineering Visualization</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj5-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj5-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>3D Printed Card Stands</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj6-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj6-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>SolidWorks Manual Clamp</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj7-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj7-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+        <article class="project-upload-card">
+          <header>
+            <h3>Material Sciences- Fatigue Properties of AlSi10Mg AM</h3>
+          </header>
+          <div class="upload-block">
+            <div class="upload-preview" id="proj8-gallery">Add media</div>
+            <label class="file-input">
+              <span>Upload media</span>
+              <input type="file" id="proj8-upload" accept="image/*,video/*" multiple />
+            </label>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-header">
+        <p class="eyebrow">Reach out</p>
         <h2>Contact</h2>
       </div>
-      <div class="contact-grid">
-        <div>
-          <p>I enjoy collaborating on new ideas, research, and design challenges. Whether it's a quick question or a detailed proposal, feel free to reach out.</p>
-          <ul class="contact-list">
-            <li><span class="pill">Email</span> <a href="mailto:jakeetorres@gmail.com">jakeetorres@gmail.com</a></li>
-            <li><span class="pill">LinkedIn</span> <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">Connect</a></li>
-            <li><span class="pill">Location</span> Los Angeles, CA</li>
-          </ul>
-        </div>
-        <form class="contact-form" id="contact-form">
-          <label>
-            <span>Your name</span>
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button type="submit" class="btn primary">Send message</button>
-          <p class="muted" id="contact-status" role="status"></p>
-        </form>
+      <div class="contact-buttons">
+        <a class="btn primary" href="https://www.linkedin.com/in/jake-e-torres-a6591a296/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn ghost" href="mailto:jet2sfo@gmail.com">Gmail</a>
+        <a class="btn primary" href="mailto:jtorre62@lion.lmu.edu">Outlook</a>
       </div>
     </section>
   </main>
@@ -198,7 +278,6 @@
   <footer class="footer">
     <p>Designed for exploration and iteration — Jake E. Torres</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
