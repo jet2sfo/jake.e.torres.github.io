@@ -4,8 +4,9 @@
   --surface-alt: #111d2f;
   --text: #f5f7fa;
   --muted: #b6bed1;
-  --accent: #ff3146;
-  --accent-strong: #00e0ff;
+  --accent: #ff2748;
+  --accent-strong: #00f0ff;
+  --accent-red: #ff4d5a;
   --radius: 16px;
   --shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
   --max-width: 1100px;
@@ -18,9 +19,9 @@
 body {
   margin: 0;
   font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, sans-serif;
-  background: radial-gradient(circle at 20% 16%, rgba(255, 49, 70, 0.22), transparent 38%),
-    radial-gradient(circle at 80% 10%, rgba(0, 224, 255, 0.24), transparent 32%),
-    linear-gradient(145deg, #0c101c, #060911 52%, #02050b);
+  background: radial-gradient(circle at 18% 14%, rgba(255, 77, 90, 0.28), transparent 38%),
+    radial-gradient(circle at 82% 12%, rgba(0, 240, 255, 0.24), transparent 36%),
+    linear-gradient(145deg, #0d111d, #050812 55%, #03050c);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -38,9 +39,22 @@ img, video, embed {
 
 header.hero {
   padding: 28px 6% 60px;
-  background: linear-gradient(130deg, rgba(0, 224, 255, 0.14), rgba(255, 49, 70, 0.12)),
-    linear-gradient(135deg, #0f1726, #0b1220 55%, #0a0f1c);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(130deg, rgba(0, 240, 255, 0.16), rgba(255, 77, 90, 0.12)),
+    linear-gradient(135deg, #121a2d, #0b1222 58%, #090f1d);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+header.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 62% 32%, rgba(255, 77, 90, 0.25), transparent 36%),
+    radial-gradient(circle at 38% 54%, rgba(0, 240, 255, 0.22), transparent 38%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.9;
 }
 
 .nav {
@@ -89,18 +103,44 @@ header.hero {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
 
-.hero h1 {
-  margin: 6px 0 10px;
-  font-size: clamp(34px, 5vw, 48px);
-  line-height: 1.2;
+
+.hero-name {
+  margin: 10px 0 12px;
+  position: relative;
+  font-size: clamp(38px, 6vw, 56px);
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.hero-name-shadow,
+.hero-name-main {
+  display: block;
+}
+
+.hero-name-shadow {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 77, 90, 0.65);
+  transform: translateY(6px);
+  filter: drop-shadow(0 10px 32px rgba(255, 77, 90, 0.4));
+}
+
+.hero-name-main {
+  background: linear-gradient(120deg, #00f0ff 0%, #b1ffff 46%, #ff4d5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 32px rgba(0, 240, 255, 0.28), 0 16px 48px rgba(255, 77, 90, 0.24);
 }
 
 .hero-subtitle {
-  color: var(--muted);
+  color: #e0f7ff;
   margin: 0 0 16px;
   font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
 .eyebrow {
@@ -148,7 +188,7 @@ main {
 }
 
 .section.alt {
-  background: linear-gradient(135deg, rgba(255, 49, 70, 0.06), rgba(0, 224, 255, 0.05)), var(--surface);
+  background: linear-gradient(135deg, rgba(255, 77, 90, 0.07), rgba(0, 240, 255, 0.06)), var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   padding: 28px;
@@ -167,11 +207,11 @@ main {
 .accent-highlight {
   display: inline-block;
   padding: 6px 14px;
-  background: linear-gradient(120deg, rgba(255, 49, 70, 0.18), rgba(0, 224, 255, 0.18));
+  background: linear-gradient(120deg, rgba(255, 77, 90, 0.18), rgba(0, 240, 255, 0.18));
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   color: var(--text);
-  box-shadow: 0 14px 36px rgba(255, 49, 70, 0.25), 0 10px 30px rgba(0, 224, 255, 0.2);
+  box-shadow: 0 14px 36px rgba(255, 77, 90, 0.25), 0 10px 30px rgba(0, 240, 255, 0.2);
 }
 
 .about-grid {
@@ -275,6 +315,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
   margin-top: 12px;
+  grid-auto-rows: 1fr;
 }
 
 .experience-card,
@@ -285,6 +326,7 @@ main {
   padding: 16px;
   display: grid;
   gap: 12px;
+  height: 100%;
 }
 
 .upload-block {
@@ -327,9 +369,10 @@ main {
 
 .skill-label {
   margin: 0 0 6px;
-  color: var(--accent-strong);
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  color: var(--accent-red);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .skill-items {
@@ -354,6 +397,11 @@ main {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 14px;
+  justify-content: center;
+}
+
+#contact.section {
+  text-align: center;
 }
 
 .footer {
