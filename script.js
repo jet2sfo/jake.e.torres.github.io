@@ -55,7 +55,3 @@ resumeUpload?.addEventListener('change', (event) => {
 });
 
 ['exp1', 'exp2', 'exp3'].forEach((id) => attachUpload(`${id}-upload`, `${id}-preview`));
-
-['proj1','proj2','proj3','proj4','proj5','proj6','proj7','proj8'].forEach((id) => {
-  attachUpload(`${id}-upload`, `${id}-gallery`);
-});
