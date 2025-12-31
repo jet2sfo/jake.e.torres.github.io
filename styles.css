@@ -388,17 +388,37 @@ main {
 }
 
 .project-year {
-  margin-top: 24px;
+  margin-top: 28px;
   color: var(--accent-red);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  padding: 10px 16px;
+  border-left: 4px solid var(--accent-red);
+  background: linear-gradient(120deg, rgba(255, 49, 70, 0.18), rgba(0, 224, 255, 0.05));
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
 .project-upload-card header h3 {
   margin: 0 0 4px;
   font-size: 18px;
+}
+
+.project-media {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.project-media img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .project-details {
