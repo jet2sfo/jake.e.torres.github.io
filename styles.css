@@ -387,6 +387,15 @@ main {
   margin-top: 12px;
 }
 
+.project-year {
+  margin-top: 24px;
+  color: var(--accent-red);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .project-upload-card header h3 {
   margin: 0 0 4px;
   font-size: 18px;
