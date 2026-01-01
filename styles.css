@@ -416,6 +416,11 @@ main {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project-index-card.project-index-cta {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
 .project-index-card a {
   color: var(--text);
   font-weight: 700;
