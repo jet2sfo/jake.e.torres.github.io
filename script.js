@@ -55,3 +55,26 @@ resumeUpload?.addEventListener('change', (event) => {
 });
 
 ['exp1', 'exp2', 'exp3'].forEach((id) => attachUpload(`${id}-upload`, `${id}-preview`));
+
+document.querySelectorAll('[data-slideshow]').forEach((slideshow) => {
+  const slides = Array.from(slideshow.querySelectorAll('[data-slide-item]'));
+  const controls = slideshow.querySelectorAll('[data-slide]');
+  if (!slides.length) return;
+
+  let index = 0;
+  const updateSlides = () => {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === index);
+    });
+  };
+
+  controls.forEach((button) => {
+    button.addEventListener('click', () => {
+      const direction = button.dataset.slide === 'next' ? 1 : -1;
+      index = (index + direction + slides.length) % slides.length;
+      updateSlides();
+    });
+  });
+
+  updateSlides();
+});
