@@ -30,7 +30,20 @@
 
   <main>
     <section class="section">
-      <div class="project-media placeholder">Add project images or videos here.</div>
+      <!-- Slideshow -->
+      <div class="project-slideshow" data-slideshow>
+        <button class="slide-btn" type="button" data-slide="prev" aria-label="Previous slide">‹</button>
+
+        <div class="slide-frame">
+          <img src="../autocad_image1.png" alt="AutoCAD engineering visualization 1" data-slide-item class="active" />
+          <img src="../autocad_image2.png" alt="AutoCAD engineering visualization 2" data-slide-item />
+          <img src="../autocad_image3.png" alt="AutoCAD engineering visualization 3" data-slide-item />
+          <img src="../autocad_image4.png" alt="AutoCAD engineering visualization 4" data-slide-item />
+        </div>
+
+        <button class="slide-btn" type="button" data-slide="next" aria-label="Next slide">›</button>
+      </div>
+
       <div class="project-details">
         <div class="project-section">
           <h4>Overview</h4>
@@ -47,5 +60,7 @@
       </div>
     </section>
   </main>
+
+  <script src="../script.js"></script>
 </body>
 </html>
