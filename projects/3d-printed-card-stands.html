@@ -30,7 +30,29 @@
 
   <main>
     <section class="section">
-      <div class="project-media placeholder">Add project images or videos here.</div>
+
+      <!-- Slideshow -->
+      <div class="project-slideshow" data-slideshow>
+        <button class="slide-btn" type="button" data-slide="prev" aria-label="Previous slide">‹</button>
+
+        <div class="slide-frame">
+          <img src="../card_stand_image1.png" alt="3D printed card stand image 1" data-slide-item class="active" />
+          <img src="../card_stand_image2.png" alt="3D printed card stand image 2" data-slide-item />
+          <img src="../card_stand_image3.png" alt="3D printed card stand image 3" data-slide-item />
+
+          <video
+            src="../card_stand_video.mov"
+            data-slide-item
+            controls
+            muted
+            playsinline
+            preload="metadata"
+          ></video>
+        </div>
+
+        <button class="slide-btn" type="button" data-slide="next" aria-label="Next slide">›</button>
+      </div>
+
       <div class="project-details">
         <div class="project-section">
           <h4>Overview</h4>
@@ -45,7 +67,10 @@
           <p>Produced a lightweight, cost-effective stand that reliably secures sports cards.</p>
         </div>
       </div>
+
     </section>
   </main>
+
+  <script src="../script.js"></script>
 </body>
 </html>
