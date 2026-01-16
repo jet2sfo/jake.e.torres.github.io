@@ -514,6 +514,21 @@ main {
   opacity: 1;
 }
 
+.slide-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slide-frame video.active {
+  opacity: 1;
+}
+
 .slide-btn {
   width: 42px;
   height: 42px;
