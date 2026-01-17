@@ -529,6 +529,16 @@ main {
   opacity: 1;
 }
 
+.slide-frame img,
+.slide-frame video {
+  z-index: 0;
+}
+
+.slide-frame img.active,
+.slide-frame video.active {
+  z-index: 1;
+}
+
 .slide-btn {
   width: 42px;
   height: 42px;
