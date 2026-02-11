@@ -412,26 +412,6 @@ main {
 }
 
 
-/* Logos: larger + centered */
-.skills-grid .skill-logo {
-  width: 100%;
-  max-width: 360px;
-  height: 190px;
-  object-fit: contain;
-  display: block;
-}
-
-/* Photo: fill the frame */
-.skills-grid .skill-photo {
-  width: 100%;
-  max-width: 420px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-
 .upload-preview .thumb {
   width: 100%;
   height: 120px;
