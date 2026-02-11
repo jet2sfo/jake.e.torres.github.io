@@ -388,15 +388,29 @@ main {
 }
 
 
-/* === Skills: make the image box a single centered frame === */
+/* ============================= */
+/* Skills Section - Uniform Images */
+/* ============================= */
+
+/* Make preview box a centered frame */
 .skills-grid .upload-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: none;
-  min-height: 230px;
-  padding: 18px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 240px !important;
+  padding: 20px !important;
 }
+
+/* Force ALL images in skills section to behave the same */
+.skills-grid .upload-preview img {
+  width: 100% !important;
+  max-width: 420px !important;
+  height: 210px !important;
+  object-fit: contain !important;   /* prevents cropping */
+  display: block !important;
+  border-radius: 12px !important;
+}
+
 
 /* Logos: larger + centered */
 .skills-grid .skill-logo {
