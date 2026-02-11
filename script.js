@@ -1,5 +1,3 @@
-const resumeUpload = document.getElementById('resume-upload');
-const resumeViewer = document.getElementById('resume-viewer');
 
 function createMediaElement(file) {
   const url = URL.createObjectURL(file);
@@ -41,18 +39,6 @@ function attachUpload(inputId, previewId) {
   });
 }
 
-resumeUpload?.addEventListener('change', (event) => {
-  const file = event.target.files?.[0];
-  if (!file) return;
-
-  const url = URL.createObjectURL(file);
-  resumeViewer.innerHTML = '';
-
-  const embed = document.createElement('embed');
-  embed.src = url;
-  embed.type = 'application/pdf';
-  resumeViewer.appendChild(embed);
-});
 
 ['exp1', 'exp2', 'exp3'].forEach((id) => attachUpload(`${id}-upload`, `${id}-preview`));
 
