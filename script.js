@@ -40,8 +40,6 @@ function attachUpload(inputId, previewId) {
 }
 
 
-['exp1', 'exp2', 'exp3'].forEach((id) => attachUpload(`${id}-upload`, `${id}-preview`));
-
 document.querySelectorAll('[data-slideshow]').forEach((slideshow) => {
   const slides = Array.from(slideshow.querySelectorAll('[data-slide-item]'));
   const controls = slideshow.querySelectorAll('[data-slide]');
