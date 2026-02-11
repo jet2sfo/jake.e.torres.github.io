@@ -387,33 +387,6 @@ main {
   text-align: center;
 }
 
-/* Make Skills image area behave like a single centered frame */
-.skills-grid .upload-preview {
-  display: flex;              /* override grid */
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  grid-template-columns: none; /* override grid setting */
-}
-
-/* Serra + LMU logos: bigger and centered */
-.skill-logo {
-  width: 100%;
-  max-width: 320px;   /* increase logo size */
-  height: 170px;      /* consistent height */
-  object-fit: contain;
-  display: block;
-}
-
-/* Your photo: fill the frame nicely */
-.skill-photo {
-  width: 100%;
-  max-width: 360px;
-  height: 190px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-}
 
 /* === Skills: make the image box a single centered frame === */
 .skills-grid .upload-preview {
