@@ -670,3 +670,40 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================= */
+/* Courses Section Styling */
+/* ============================= */
+
+.courses-container {
+  margin-top: 12px;
+}
+
+.courses-list {
+  columns: 2;
+  gap: 40px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.courses-list li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  break-inside: avoid;
+}
+
+/* Match your existing card aesthetic */
+#courses.section {
+  background: linear-gradient(150deg, rgba(0, 224, 255, 0.06), rgba(255, 49, 70, 0.06)), var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .courses-list {
+    columns: 1;
+  }
+}
